@@ -1,0 +1,204 @@
+.pageWrapper {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/fondos/pepepepeppe.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: clamp(12px, 4vw, 24px);
+}
+
+.card {
+    width: 100%;
+    max-width: min(92vw, 480px);
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: clamp(16px, 3vw, 24px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.08),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    padding: clamp(20px, 5vw, 36px) clamp(18px, 4vw, 32px);
+    animation: fadeUp 0.5s ease both;
+}
+
+.icon {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    text-align: center;
+    display: block;
+    margin-bottom: 6px;
+    opacity: 0.4;
+}
+
+.title {
+    font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+    font-weight: 500;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.subtitle {
+    font-size: clamp(0.7rem, 2.2vw, 0.8rem);
+    color: #5a5a72;
+    text-align: center;
+    margin-bottom: clamp(16px, 4vw, 24px);
+}
+
+.inputGroup {
+    margin-bottom: clamp(10px, 2.5vw, 14px);
+}
+
+.inputGroup label {
+    display: block;
+    font-size: clamp(0.62rem, 1.8vw, 0.7rem);
+    font-weight: 600;
+    color: #5a5a72;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: clamp(8px, 2vw, 10px) clamp(10px, 2.5vw, 14px);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+    font-family: inherit;
+    color: #1a1a2e;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.inputGroup input:focus {
+    border-color: #1a1a2e;
+    box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.08);
+}
+
+.inputError {
+    border-color: #ff6b35 !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1) !important;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(14px, 3.5vw, 20px);
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: clamp(0.68rem, 2vw, 0.75rem);
+    color: #5a5a72;
+    cursor: pointer;
+}
+
+.forgotLink {
+    font-size: clamp(0.68rem, 2vw, 0.75rem);
+    color: #5a5a72;
+    text-decoration: none;
+}
+
+.forgotLink:hover {
+    color: #1a1a2e;
+}
+
+.btnLogin {
+    width: 100%;
+    padding: clamp(10px, 2.5vw, 12px);
+    background: linear-gradient(135deg, #1a1a2e, #2a2a4a);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btnLogin:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(26, 26, 46, 0.2);
+}
+
+.btnSuccess {
+    background: linear-gradient(135deg, #bd3d32, #92392f) !important;
+}
+
+.signupLink {
+    text-align: center;
+    font-size: clamp(0.72rem, 2.2vw, 0.8rem);
+    color: #5a5a72;
+    margin-top: clamp(12px, 3vw, 18px);
+}
+
+.signupLink a {
+    color: #1a1a2e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    margin-top: clamp(10px, 2.5vw, 16px);
+    font-size: clamp(0.58rem, 1.6vw, 0.65rem);
+    color: #ebebf1;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 340px) {
+    .options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+
+@media (max-height: 480px) and (orientation: landscape) {
+    .pageWrapper {
+        align-items: flex-start;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    .card {
+        max-width: 340px;
+    }
+    .subtitle {
+        margin-bottom: 12px;
+    }
+    .inputGroup {
+        margin-bottom: 8px;
+    }
+    .options {
+        margin-bottom: 12px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .card {
+        max-width: 520px;
+    }
+    .title {
+        font-size: 1.9rem;
+    }
+}
