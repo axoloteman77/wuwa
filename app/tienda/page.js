@@ -24,7 +24,7 @@ const productos = [
         descripcion: 'Sonido envolvente con cancelación de ruido y 30 horas de batería.',
         precio: 89,
         badge: 'Nuevo',
-        icono: Headphones,
+
         imagen: '/fondos/fondo1.jpg',
     },
     {
