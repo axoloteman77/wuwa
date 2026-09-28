@@ -19,7 +19,7 @@ import styles from './tienda.module.css';
 const productos = [
     {
         id: 1,
-        nombre: 'Auriculares Air Max',
+        nombre: 'Auriculares Air',
         descripcion: 'Sonido envolvente con cancelación de ruido y 30 horas de batería.',
         precio: 89,
         badge: 'Nuevo',
