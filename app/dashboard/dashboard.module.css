@@ -45,6 +45,9 @@
 }
 
 .logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     background: linear-gradient(135deg, #1a1a2e, #2a2a4a);
     border: none;
     color: #fff;
@@ -123,17 +126,28 @@
 }
 
 /* ===== Mobile ===== */
-@media (max-width: 480px) {
-    .header {
+@media (max-width: 640px) {
+    .menuToggle {
+        display: flex;
+    }
+    .nav {
+        display: none;
+        width: 100%;
         flex-direction: column;
         align-items: stretch;
-        text-align: center;
+        gap: 6px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(26, 26, 46, 0.1);
     }
-    .headerLeft {
+    .navOpen {
+        display: flex;
+    }
+    .navLink {
         justify-content: center;
     }
     .logoutBtn {
         width: 100%;
+        justify-content: center;
     }
 }
 
@@ -215,4 +229,84 @@
     font-size: clamp(0.75rem, 2vw, 0.85rem);
     line-height: 1.5;
     opacity: 0.9;
+}
+
+/* ===== Menú de navegación ===== */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 16px);
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: clamp(0.72rem, 2vw, 0.85rem);
+    font-weight: 500;
+    color: #3a3a52;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.navLink:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #1a1a2e;
+}
+
+.navLinkActive {
+    background: rgba(255, 255, 255, 0.7);
+    color: #1a1a2e;
+    font-weight: 600;
+}
+
+.menuToggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #1a1a2e;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+/* ===== Botón de compra en la card de bienvenida ===== */
+.shopBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    background: linear-gradient(135deg, #1a1a2e, #2a2a4a);
+    color: #fff;
+    text-decoration: none;
+    padding: clamp(9px, 2.2vw, 11px) clamp(16px, 3vw, 22px);
+    border-radius: 10px;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.shopBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(26, 26, 46, 0.2);
+}
+
+/* ===== Link dentro de la flip card ===== */
+.flipLink {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.flipLink:hover {
+    background: rgba(255, 255, 255, 0.28);
 }
