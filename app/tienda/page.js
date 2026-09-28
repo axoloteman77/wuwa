@@ -15,7 +15,6 @@ import {
     Plus,
 } from 'lucide-react';
 import styles from './tienda.module.css';
-import { url } from 'node:inspector';
 
 const productos = [
     {
@@ -24,7 +23,8 @@ const productos = [
         descripcion: 'Sonido envolvente con cancelación de ruido y 30 horas de batería.',
         precio: 89,
         badge: 'Nuevo',
-        imagen: '/fondos/fondo1.jpg',
+        icono: Headphones,
+        imagen: '/fondos/productos.jpg',
     },
     {
         id: 2,
@@ -118,11 +118,11 @@ export default function TiendaPage() {
                             return (
                                 <article key={p.id} className={`${styles.productCard} ${styles.glass}`}>
                                     <div className={styles.productImage}>
-                                    {p.imagen ? (
-                                        <img src={p.imagen} alt={p.nombre} className={styles.productImg} />
-                                    ) : (
-                                        <Icono size={48} strokeWidth={1.2} />
-                                    )}
+                                        {p.imagen ? (
+                                            <img src={p.imagen} alt={p.nombre} className={styles.productImg} />
+                                        ) : (
+                                            <Icono size={48} strokeWidth={1.2} />
+                                        )}
                                     </div>
                                     {p.badge && <span className={styles.productBadge}>{p.badge}</span>}
                                     <h3 className={styles.productName}>{p.nombre}</h3>
